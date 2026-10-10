@@ -50,8 +50,9 @@ ALTER DEFAULT PRIVILEGES GRANT INSERT, SELECT, UPDATE, DELETE ON TABLES to omicr
 /*
  * Configure a replication factor of 5 to ensure that the system can maintain
  * availability in the face of any two node failures.
+ * Edited to 3 for homelab.
  */
-ALTER RANGE default CONFIGURE ZONE USING num_replicas = 5;
+ALTER RANGE default CONFIGURE ZONE USING num_replicas = 3;
 
 /*
  * The deployment strategy for clickhouse
